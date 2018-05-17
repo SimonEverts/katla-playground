@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+package crater;
+
+message  Dimension {
+    int32 x = 1;
+    int32 y = 2;
+}
+
+message  Position {
+    int32 x = 1;
+    int32 y = 2;
+}
+
+message Window {
+    int32 id = 1;
+    Dimension dimension = 2;
+    Position position = 3;
+}
+
+
+message Message {
+    repeated int32 id = 1;
+}
+
+service window {
+    rpc CreateWindow (Window) returns (Window) {}
+}
