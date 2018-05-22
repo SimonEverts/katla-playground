@@ -1,2 +1,3 @@
 renderer/vulkan-test/build/
+renderer/skia-test/build/
 .vscode
